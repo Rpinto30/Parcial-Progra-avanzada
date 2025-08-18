@@ -1,1 +1,4 @@
-print("AQUÍ SE HARÁ EL MANAGER O ADMINISTRADOR DE LAS FUNCIONES DEL JUEGO")
+class GameManager:
+    def __init__(self):
+        self.points_list = {} #Jugador: Puntaje
+
