@@ -13,5 +13,11 @@ questions_list = [
     MultipleChoiceQuestion("¿Cuál es el libro sagrado de los Mayas?", ["Popol Vuh", "Kik'aslemaal", "Ri tzij kek'iyik"],
                            "Popol Vuh"),
 
+    MultipleChoiceQuestion("¿Guatemala tiene 21 departamentos?", ["Verdadero", "Falso"], "Falso"),
+    MultipleChoiceQuestion("¿El cuerpo de un adulto tiene 206 huesos?", ["Verdadero", "Falso"], "Verdadero"),
+    MultipleChoiceQuestion("¿El primer día de Semana Santa se llama domingo de resurrección ?",
+                       ["Verdadero", "Falso"], "Falso"),
+    MultipleChoiceQuestion("¿Los fundadores de Microsoft son Bill Gates y Paul Allen?", ["Verdadero", "Falso"], "Verdadero"),
+    MultipleChoiceQuestion("¿El creador de la Odisea es Homero Simpson?", ["Verdadero", "Falso"], "Falso"),
 
 ]
