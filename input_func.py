@@ -14,7 +14,7 @@ def input_str(message): #INGRESA UN DATO CADENA Y VERIFICA QUE NO ESTÉ VACÍO
             value = input(message)
         except ValueError:print('-' * 50 + '\n' + "❌" * 5 + "   Lo siento valor no valido, intenta nuevamente   " + "❌" * 5)
         else:
-            if value != '': break
-            else:print('-' * 50 + '\n' + "❌" * 5 + "   Lo siento valor no valido, la entrada no puede quedar vacia!   " + "❌" * 5)
+            if value.isspace(): print('-' * 50 + '\n' + "❌" * 5 + "   Lo siento valor no valido, la entrada no puede quedar vacia!   " + "❌" * 5)
+            else: break
 
     return value
