@@ -1,0 +1,1 @@
+print("Aquí ira la clase que administre la trivia")
