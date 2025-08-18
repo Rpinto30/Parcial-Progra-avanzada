@@ -3,7 +3,7 @@ from input_func import *
 class Question:
     def __init__(self, question, correct_answer):
         self.question = question
-        self.answer = None
+        self.correct_answer = correct_answer
 
     def ask_question(self):
         pass
@@ -12,8 +12,11 @@ class Question:
         print(self.question)
         return self.ask_question()
 
-    def verify_answer(self):
-        pass
+    def verify_answer(self, answer, point):
+        if answer == self.correct_answer:
+            point += 1
+        else:
+            pass
 
 class MultipleChoiceQuestion(Question):
     def __init__(self, question, answer, correct_answer):
