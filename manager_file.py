@@ -8,6 +8,7 @@ class GameManager:
         #trivia.start_trivia(self.points_list)
         pass
 
+
     def show_results(self):
         #SORTED(ITERADOR, KEY, REVERSA)
         order_point = dict(sorted(self.points_list.items(), key=get_points, reverse=True))
