@@ -2,7 +2,6 @@ print("AQUÍ VA EL MENÚ DONDE EL USUARIO INTERACTUARÁ")
 
 # Ingreso del menú
 
-from trivia_manager import User, Trivia, Game
 from presenter import ado_robot, error_bot
 
 while True:
@@ -18,6 +17,6 @@ while True:
         case 1:
             print("\n --- Frase de juego ---")
             print("1. Jugar de nuevo")
-
+        case 4: break
 
 

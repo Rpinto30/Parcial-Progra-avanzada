@@ -1,33 +1,38 @@
-print("Aquí ira la clase que administre la trivia")
 from data_base import questions_list
+from input_func import *
 
 
 class Trivia:
-    def __init__(self, game, user):
-        counter = 0
-        self.user = user
-        self.game = game
+    def __init__(self):
         self.users_game = {}
 
-class Game:
-    def __init__(self, game, score):
-
 class User:
-    def __init__(self, user):
-        self.users = []
+    def __init__(self):
+        self.users = [] # Lista que guarda usuarios
 
     def add_user(self):
-        try:
-            user = input("Ingresa el nombre del usuario").lower()
-            if user in self.users:
+        user = input("Ingresa el nombre del usuario").lower()
+        if user in self.users:
                 print("El usuario ya existe dentro del juego.")
-            else:
+        else:
                 self.users.append(user)
 
-        except Exception as e:
-            print("Error detectado", e)
+    def show_users(self):
+        print("\n Usuarios en el juego:")
+        if self.users:
+            for user in self.users:
+                print(f"- {user}")
+        else:
+            print("No hay usuarios registrados")
 
-    def existent_user(self, user):
-        user = input("Ingresa el nombre del usuario al que deseas igresar: ").lower()
-        if user in self.users:
+    def delete_user(self, user_deleted):
+        user_deleted = input("Ingresa el nombre de usuario que deseas eliminar: ").lower()
+        if user_deleted in self.users:
+            self.users.remove(user_deleted)
+        else:
+            print("EL usuario no se encuentra registrado en el juego")
+
+
+
+
 
