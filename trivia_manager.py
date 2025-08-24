@@ -1,10 +1,6 @@
 from data_base import questions_list
 from input_func import *
-
-
-class Trivia:
-    def __init__(self):
-        self.users_game = {}
+from questions import Question, MultipleChoiceQuestion, WritingsQuestion
 
 class User:
     def __init__(self):
@@ -31,6 +27,11 @@ class User:
             self.users.remove(user_deleted)
         else:
             print("EL usuario no se encuentra registrado en el juego")
+
+class Game(User):
+    def __init__(self):
+        super().__init__()
+        self.users_game = {}
 
 
 
