@@ -22,13 +22,15 @@ while True:
         case 1:
             print("\n --- ¿Listo para jugar?  ---")
             print("1. Jugar de nuevo")
-            print("2. Iniciar un nuevo juego")
+            print("2. Nueva partida")
+
 
             option2 = input("Ingresa la opción de tu preferencia: ")
             match option2:
                 case 1:
-                    u.show_users()
-
+                    print("\n --- Juego de trivia --- ")
+                    print("1. Jugar en partida existente ")
+                    print("2. Crear una nueva partida")
                 case 2:
 
                     break
