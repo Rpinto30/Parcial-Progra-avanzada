@@ -1,3 +1,4 @@
+from time import sleep
 def input_number(message): #INGRESAR UN NUMERO Y VERIFICAR QUE SU ENTRADA SEA VALIDA
     while True:
         try:
@@ -25,5 +26,11 @@ def input_str(message): #INGRESA UN DATO CADENA Y VERIFICA QUE NO ESTÉ VACÍO
             else: break
 
     return value
+
+def print_dialog(message, wait_time = 0.05):
+    for i in message:
+        print(i,end='')
+        sleep(wait_time)
+    print()
 
 def clear_screen(): print("\n"*100)

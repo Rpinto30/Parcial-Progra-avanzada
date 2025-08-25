@@ -1,5 +1,4 @@
 # Ingreso del menú
-from presenter import *
 from manager_file import  *
 
 load_data()
@@ -31,8 +30,9 @@ while True:
 
                     match salir:
                         case 'si':
+                            clear_screen()  # ESTETICO
                             print("--- Has salido del programa :( ---")
-                            crying_bot()
+                            crying_bot() #ESTETICO
                             break
                         case 'no':
                             clear_screen() #ESTETICO
@@ -44,12 +44,13 @@ while True:
                         case _:
                             clear_screen() #ESTETICO
                             print("      Lo siento... no entiendo lo que me dices")
-                            angry_bot()
+                            angry_bot() #ESTETICO
                             sleep(2)
                             clear_screen()  #ESTETICO
                 if salir == 'si':
                     break
-    #except KeyboardInterrupt:
-    #    print("\nEEEY! No hagas eso")
-    #    angry_bot()
+    except KeyboardInterrupt:
+        print("\nEEEY! No hagas eso")
+        angry_bot() #ESTETICO
+        sleep(2) #ESTETICO
     except Exception as e: print("Error!! Hemos encontrado un error...",e)

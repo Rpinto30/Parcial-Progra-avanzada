@@ -21,11 +21,13 @@ class GameManager:
         if self.points_list:
             clear_screen() #ESTETICO
             victory_bot() #ESTETICO
-            sleep(2) #ESTETICO
+            print_dialog(f"{"":<10}{"NO":10}{"JUGADOR":<20}{"PUNTUACIÓN":>5}",0.02)
             #SORTED(ITERADOR, KEY, REVERSA)
             order_point = dict(sorted(self.points_list.items(), key=get_points, reverse=True))
             for num, (name, point) in enumerate(order_point.items(),1):
-                print(f"{"":<10}{str(num)+")":10}{name.upper():<20}{point:>5}")
+                print_dialog(f"{"":<10}{str(num)+")":10}{name.upper():<20}{point:>5}")
+            sleep(4.2) #ESTETICO
+            clear_screen() #ESTETICO
         else:
             print("No hay jugadores registrados")
 

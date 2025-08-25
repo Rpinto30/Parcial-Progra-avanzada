@@ -1,6 +1,5 @@
 from questions import *
 
-
 questions_list = [
     # Preguntas de eleccion multiple
     MultipleChoiceQuestion("¿Quién compuso la canción Luna de Xelajú?",
