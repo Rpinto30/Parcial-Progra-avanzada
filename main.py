@@ -1,7 +1,4 @@
-
-
 # Ingreso del menú
-
 from presenter import *
 from manager_file import  *
 
