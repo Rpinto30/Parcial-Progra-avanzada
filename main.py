@@ -3,6 +3,7 @@ from presenter import *
 from manager_file import  *
 
 gm = GameManager()
+load_data()
 
 while True:
     ado_robot()
