@@ -4,9 +4,9 @@ from questions import *
 questions_list = [
     # Preguntas de eleccion multiple
     MultipleChoiceQuestion("¿Quién compuso la canción Luna de Xelajú?",
-                           ["Miguel Angel Asturias", "Paco Pérez", "Ricardo Arjona"], "Paco Pérez"),
+                           ["Miguel Angel Asturias", "Paco Pérez", "Ricardo Arjona"], 1),
     MultipleChoiceQuestion("¿Cuál es el tercer planeta del sistema solar?", ["Venus", "Tierra", "Marte"],
-                           "Tierra"),
+                           1),
     MultipleChoiceQuestion("¿Qué se celebra el 15 de septiembre en Guatemala?", ["Quema del diablo", "Semana Santa", "Independencia"],
                            "Independencia"),
     MultipleChoiceQuestion("¿De quién es la canción Almohada?", ["José José", "Juan Gabriel", "Luis Miguel"],
@@ -18,7 +18,7 @@ questions_list = [
     MultipleChoiceQuestion("¿El cuerpo de un adulto tiene 206 huesos?", ["Verdadero", "Falso"], "Verdadero"),
     MultipleChoiceQuestion("¿El primer día de Semana Santa se llama domingo de resurrección ?",
                        ["Verdadero", "Falso"], "Falso"),
-    MultipleChoiceQuestion("¿Los fundadores de Microsoft son Bill Gates y Paul Allen?", ["Verdadero", "Falso"], "Verdadero"),
+    MultipleChoiceQuestion("¿Los fundadores de Microsoft son Bill Gates y Paul Allen?", ["Verdadero", "Falso"], 0),
     MultipleChoiceQuestion("¿El creador de la Odisea es Homero Simpson?", ["Verdadero", "Falso"], "Falso"),
     # Preguntas de completar la frase
     WritingsQuestion("El sol es a día como Luna es a _____", "noche"),

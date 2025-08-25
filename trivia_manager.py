@@ -13,7 +13,7 @@ class User:
             print("¡Se ha generado una nueva partida!")
             dict_user[self.user_name] = 0 # Nueva partida
 
-class Game(User):
+class Game:
     def __init__(self):
         super().__init__()
     def start_game(self, point, username):
