@@ -18,9 +18,12 @@ while True:
     match option1:
         case 1:
             print("\n --- ¿Listo para jugar?  ---")
+
             gm.init_game()
         case 2:
+            victory_bot()
             gm.show_results()
+
         case 3:
             while True:
                 salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
@@ -32,9 +35,10 @@ while True:
                         break
                     case 'no':
                         print(" --- Entonces volvamos a jugar :) --- ")
-
+                        happy_face()
                     case _:
                         print("Has ingresado un dato erroneo.")
+                        angry_bot()
             if salir == 'si':
                 break
 
