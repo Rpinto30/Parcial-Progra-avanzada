@@ -14,10 +14,13 @@ class GameManager:
 
 
     def show_results(self):
-        #SORTED(ITERADOR, KEY, REVERSA)
-        order_point = dict(sorted(self.points_list.items(), key=get_points, reverse=True))
-        for num, (name, point) in enumerate(order_point.items(),1):
-            print(f"{"":<10}{str(num)+")":10}{name.upper():<20}{point:>5}")
+        if self.points_list:
+            #SORTED(ITERADOR, KEY, REVERSA)
+            order_point = dict(sorted(self.points_list.items(), key=get_points, reverse=True))
+            for num, (name, point) in enumerate(order_point.items(),1):
+                print(f"{"":<10}{str(num)+")":10}{name.upper():<20}{point:>5}")
+        else:
+            print("No hay jugadores registrados")
 
     @staticmethod
     def _load_data(self):
