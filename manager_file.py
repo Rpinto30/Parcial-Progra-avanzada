@@ -10,7 +10,7 @@ class GameManager:
         user.add_user(self.points_list)
         game = Game()
         game.start_game(self.points_list, user.user_name)
-        pass
+        save_data(self.points_list)
 
 
     def show_results(self):
@@ -34,4 +34,4 @@ class GameManager:
 
     def delete_all(self):
         self.points_list.clear()
-        #save_data
+        save_data(self.points_list)

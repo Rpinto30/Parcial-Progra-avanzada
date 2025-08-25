@@ -2,8 +2,9 @@
 from presenter import *
 from manager_file import  *
 
-gm = GameManager()
 load_data()
+gm = GameManager()
+gm.points_list = load_data()
 
 while True:
     ado_robot()
@@ -37,5 +38,3 @@ while True:
                         print("Has ingresado un dato erroneo.")
             if salir == 'si':
                 break
-
-

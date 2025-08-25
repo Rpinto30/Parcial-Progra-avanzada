@@ -10,5 +10,3 @@ def load_data():
         with open("data.json", mode="r", encoding="utf-8") as read_file:
             return json.load(read_file)
     except FileNotFoundError: save_data({})
-
-load_data()
