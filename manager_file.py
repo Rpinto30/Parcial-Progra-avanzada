@@ -1,12 +1,16 @@
+from trivia_manager import *
 def get_points(item): return item[1]
 class GameManager:
     def __init__(self):
         self.points_list = {} #Jugador: Puntaje
 
     def init_game(self):
-        #trivia = Trivia()
-        #trivia.start_trivia(self.points_list)
+        user = User()
+        user.add_user(self.points_list)
+        game = Game()
+        game.start_game(self.points_list, user.user_name)
         pass
+
 
     def show_results(self):
         #SORTED(ITERADOR, KEY, REVERSA)
