@@ -7,38 +7,43 @@ gm = GameManager()
 gm.points_list = load_data()
 
 while True:
-    ado_robot()
-    print("\n --- ¡Bienvenido al juego de Trivia! ---")
-    print("1. Ingresar al juego")
-    print("2. Visualizar puntajes ")
-    print("3. Salir")
+    try:
+        ado_robot()
+        print("\n --- ¡Bienvenido al juego de Trivia! ---")
+        print("1. Ingresar al juego")
+        print("2. Visualizar puntajes ")
+        print("3. Salir")
 
-    option1 = input_number("Ingresa la opcion de tu preferencia (1 - 3): ")
+        option1 = input_number("Ingresa la opcion de tu preferencia (1 - 3): ")
 
-    # Inicio de match (ejecucion de opciones)
-    match option1:
-        case 1:
-            print("\n --- ¿Listo para jugar?  ---")
+        # Inicio de match (ejecucion de opciones)
+        match option1:
+            case 1:
+                print("\n --- ¿Listo para jugar?  ---")
 
-            gm.init_game()
-        case 2:
-            victory_bot()
-            gm.show_results()
+                gm.init_game()
+            case 2:
+                victory_bot()
+                gm.show_results()
 
-        case 3:
-            while True:
-                salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
-                mid_bot()
-                match salir:
-                    case 'si':
-                        print("--- Has salido del programa :( ---")
-                        crying_bot()
-                        break
-                    case 'no':
-                        print(" --- Entonces volvamos a jugar :) --- ")
-                        happy_face()
-                    case _:
-                        print("Has ingresado un dato erroneo.")
-                        angry_bot()
-            if salir == 'si':
-                break
+            case 3:
+                while True:
+                    salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
+                    mid_bot()
+                    match salir:
+                        case 'si':
+                            print("--- Has salido del programa :( ---")
+                            crying_bot()
+                            break
+                        case 'no':
+                            print(" --- Entonces volvamos a jugar :) --- ")
+                            happy_face()
+                        case _:
+                            print("Has ingresado un dato erroneo.")
+                            angry_bot()
+                if salir == 'si':
+                    break
+    except KeyboardInterrupt:
+        print("\nEEEY! No hagas eso")
+        angry_bot()
+    except Exception as e: print("Error!! Hemos encontrado un error...",e)
