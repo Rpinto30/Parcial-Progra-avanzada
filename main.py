@@ -1,4 +1,4 @@
-print("AQUÍ VA EL MENÚ DONDE EL USUARIO INTERACTUARÁ")
+
 
 # Ingreso del menú
 
@@ -14,7 +14,7 @@ while True:
     print("2. Visualizar puntajes ")
     print("3. Salir")
 
-    option1 = input_number("Ingresa la opcion de tu preferencia (1 - 2): ")
+    option1 = input_number("Ingresa la opcion de tu preferencia (1 - 3): ")
 
     # Inicio de match (ejecucion de opciones)
     match option1:

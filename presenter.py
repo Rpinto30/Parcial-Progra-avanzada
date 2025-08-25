@@ -1,4 +1,3 @@
-print("AQUI VAN LAS FUNCIONES DONDE SE IMPRIMIRÁ AL PERSONAJE PRESENTADOR")
 
 def ado_robot():
     print("""
