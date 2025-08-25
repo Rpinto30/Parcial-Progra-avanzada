@@ -12,14 +12,14 @@ class Question:
         print(self.question)
         return self.ask_question()
 
-    def verify_answer(self, answer, point):
-        print(answer)
-        print(self.correct_answer)
-        if answer == self.correct_answer:
+    def verify_answer(self, answer):
+        if str(answer).lower() == str(self.correct_answer).lower():
             print("Correcto")
-            point += 1
+            return True
         else:
             print("Incorrecto")
+            return False
+
 
 class MultipleChoiceQuestion(Question):
     def __init__(self, question, answer, correct_answer):

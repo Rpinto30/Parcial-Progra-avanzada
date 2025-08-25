@@ -19,10 +19,10 @@ class Game:
     def start_game(self, point, username):
         print("\n Has iniciado el juego!")
         question = random.sample(questions_list, k=10)
-        for q in question:
-            print("Pregunta:")
+        for num,q in enumerate(question,1):
+            print(f"\nPregunta {num}:")
             answer = q.show_question() # Muestra y Guarda la respuesta
-            q.verify_answer(answer, point[username])
+            if q.verify_answer(answer): point[username]+=1
 
 
 

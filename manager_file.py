@@ -1,3 +1,4 @@
+from save_data import *
 from trivia_manager import *
 def get_points(item): return item[1]
 class GameManager:
@@ -18,14 +19,15 @@ class GameManager:
         for num, (name, point) in enumerate(order_point.items(),1):
             print(f"{"":<10}{str(num)+")":10}{name.upper():<20}{point:>5}")
 
-    def load_data(self):
-        #load_data
+    @staticmethod
+    def _load_data(self):
+        load_data()
         pass
 
     def delete_name(self, name):
         if name not in self.points_list: raise ValueError(f"No se ha encontrado al jugador: {name}")
         else: del self.points_list[name]
-        #save_data
+        save_data(self.points_list)
 
     def delete_all(self):
         self.points_list.clear()
