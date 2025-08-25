@@ -13,13 +13,6 @@ class User:
             print("¡Se ha generado una nueva partida!")
             dict_user[self.user_name] = 0 # Nueva partida
 
-    def delete_user(self, dict_user):
-        user_deleted = input_str("Ingresa el nombre de usuario que deseas eliminar: ").lower()
-        if user_deleted in dict_user:
-            del dict_user[user_deleted]
-        else:
-            print("EL usuario no se encuentra registrado en el juego")
-
 class Game(User):
     def __init__(self):
         super().__init__()

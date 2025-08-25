@@ -8,7 +8,7 @@ class GameManager:
         user = User()
         user.add_user(self.points_list)
         game = Game()
-        #trivia.start_trivia(self.points_list)
+        game.start_game(self.points_list, user.user_name)
         pass
 
 
