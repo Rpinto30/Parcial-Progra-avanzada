@@ -50,7 +50,9 @@ while True:
                 if salir == 'si':
                     break
     except KeyboardInterrupt:
+        clear_screen() #ESTETICO
         print("\nEEEY! No hagas eso")
         angry_bot() #ESTETICO
         sleep(2) #ESTETICO
+        clear_screen() #ESTETICO
     except Exception as e: print("Error!! Hemos encontrado un error...",e)

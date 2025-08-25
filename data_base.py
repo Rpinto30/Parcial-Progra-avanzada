@@ -27,7 +27,7 @@ questions_list = [
     WritingsQuestion("Chofer es a Tuc Tuc como piloto a _____", "avion"),
     # Preguntas de respuesta directa
     WritingsQuestion("¿Cuál es el primer nombre del autor del Don Quijote de la Mancha?", "miguel"),
-    WritingsQuestion("¿Cuál es el país más poblado del mundo?", "india"),
+    WritingsQuestion("¿Cuál es el país más poblado del mundo desde el 2023?", "india"),
     WritingsQuestion("¿Qué país se le conoce como el “País del Sol Naciente”?", "japon"),
     WritingsQuestion("¿Cómo se llama el padre de todo en la mitología griega?", "zeus"),
     WritingsQuestion("¿Cómo se llama el ave nacional de Guatemala?", "quetzal")

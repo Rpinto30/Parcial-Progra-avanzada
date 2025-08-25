@@ -21,6 +21,7 @@ class Game:
     def __init__(self):
         super().__init__()
     def start_game(self, point, username):
+        sesion_points = 0 #Para contar los puntos unicamente de este juego
         clear_screen() #ESTETICO
         print_dialog("         ---Listo???---",0.1)
         sleep(1.2)
@@ -30,9 +31,26 @@ class Game:
             mid_bot()  # ESTETICO
             print(f"\nPregunta {num}:")
             answer = q.show_question() # Muestra y Guarda la respuesta
-            if q.verify_answer(answer): point[username]+=1
+            if q.verify_answer(answer):
+                point[username]+=1
+                sesion_points += 1
             sleep(2) #ESTETICO
             clear_screen() #ESTETICO
 
         #SE IMPRIME MENSAJE FINAL
         clear_screen() #ESTETICO
+        print_dialog(str("Tu resultado de este juego fue de...").strip())
+        sleep(0.8) #ESTETICO
+        print(f"{sesion_points} puntos!") #TOD ESTO ES ESTETICO
+        sleep(1.5) #ESTETICO
+        if 0 <= sesion_points <=5:
+            crying_bot()
+            print("        Mejor suerte la proxima...      ")
+        elif 6 <= sesion_points <= 9:
+            happy_face()
+            print("        MUY BIEN JUGADO!!!      ")
+        else:
+            victory_bot()
+            print("      EXCELENTE!! JUEGO PERFECTO!!!      ")
+        print_dialog(f"\n      Se agregan a tu puntaje anterior... Tienes {point[username]} en total!")
+        sleep(3)
