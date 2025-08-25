@@ -1,5 +1,9 @@
+from os import system as sys
+from time import sleep #ESTETICO
 from save_data import *
 from trivia_manager import *
+from presenter import *
+
 def get_points(item): return item[1]
 class GameManager:
     def __init__(self):
@@ -15,6 +19,9 @@ class GameManager:
 
     def show_results(self):
         if self.points_list:
+            clear_screen() #ESTETICO
+            victory_bot() #ESTETICO
+            sleep(2) #ESTETICO
             #SORTED(ITERADOR, KEY, REVERSA)
             order_point = dict(sorted(self.points_list.items(), key=get_points, reverse=True))
             for num, (name, point) in enumerate(order_point.items(),1):

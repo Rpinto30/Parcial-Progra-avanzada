@@ -1,3 +1,5 @@
+from os import system as sys #ESTETICO
+from time import sleep #ESTETICO
 from input_func import *
 
 class Question:

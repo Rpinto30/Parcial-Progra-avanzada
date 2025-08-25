@@ -8,7 +8,7 @@ gm.points_list = load_data()
 
 while True:
     try:
-        ado_robot()
+        ado_robot() #ESTETICO
         print("\n --- ¡Bienvenido al juego de Trivia! ---")
         print("1. Ingresar al juego")
         print("2. Visualizar puntajes ")
@@ -20,30 +20,36 @@ while True:
         match option1:
             case 1:
                 print("\n --- ¿Listo para jugar?  ---")
-
                 gm.init_game()
             case 2:
-                victory_bot()
                 gm.show_results()
-
             case 3:
                 while True:
-                    salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
+                    clear_screen() #ESTETICO
                     mid_bot()
+                    salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
+
                     match salir:
                         case 'si':
                             print("--- Has salido del programa :( ---")
                             crying_bot()
                             break
                         case 'no':
-                            print(" --- Entonces volvamos a jugar :) --- ")
+                            clear_screen() #ESTETICO
+                            print("      --- Entonces volvamos a jugar :) --- ")
                             happy_face()
+                            sleep(2) #ESTETICO
+                            clear_screen() #ESTETICO
+                            break
                         case _:
-                            print("Has ingresado un dato erroneo.")
+                            clear_screen() #ESTETICO
+                            print("      Lo siento... no entiendo lo que me dices")
                             angry_bot()
+                            sleep(2)
+                            clear_screen()  #ESTETICO
                 if salir == 'si':
                     break
-    except KeyboardInterrupt:
-        print("\nEEEY! No hagas eso")
-        angry_bot()
+    #except KeyboardInterrupt:
+    #    print("\nEEEY! No hagas eso")
+    #    angry_bot()
     except Exception as e: print("Error!! Hemos encontrado un error...",e)
