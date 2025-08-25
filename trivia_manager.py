@@ -4,7 +4,7 @@ import  random
 
 class User:
     def __init__(self):
-        self.user_name = input_str("Ingresa el nombre del usuario").lower() # String
+        self.user_name = input_str("Ingresa el nombre del usuario: ").lower() # String
 
     def add_user(self, dict_user):
         if self.user_name in dict_user:
