@@ -8,7 +8,7 @@ class User:
         self.user_name = "" # Lista que guarda usuarios
 
     def add_user(self, dict_user):
-        user = input("Ingresa el nombre del usuario").lower()
+        user = input_str("Ingresa el nombre del usuario").lower()
         if user in dict_user:
             print(f"Volviendo a jugar como {user}.")
         else:
@@ -16,10 +16,10 @@ class User:
             dict_user[user] = 0 # Nueva partida
 
 
-    def delete_user(self, user_deleted):
-        user_deleted = input("Ingresa el nombre de usuario que deseas eliminar: ").lower()
-        if user_deleted in self.users:
-            self.users.remove(user_deleted)
+    def delete_user(self, dict_user):
+        user_deleted = input_str("Ingresa el nombre de usuario que deseas eliminar: ").lower()
+        if user_deleted in dict_user:
+            del dict_user[user_deleted]
         else:
             print("EL usuario no se encuentra registrado en el juego")
 
