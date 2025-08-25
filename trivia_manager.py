@@ -23,7 +23,7 @@ class Game(User):
             print("Pregunta:")
             answer = q.show_question() # Muestra y Guarda la respuesta
             q.verify_answer(answer, point[username])
-            print("La respuesta es correcta")
+
 
 
 
