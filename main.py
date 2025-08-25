@@ -25,13 +25,16 @@ while True:
             gm.show_results()
         case 3:
             while True:
-                salir = input_str("--- ¿Estás seguro que quieres salir? :( --- ")
+                salir = input_str("--- ¿Estás seguro que quieres salir?  --- ")
+                mid_bot()
                 match salir:
                     case 'si':
                         print("--- Has salido del programa :( ---")
+                        crying_bot()
                         break
                     case 'no':
                         print(" --- Entonces volvamos a jugar :) --- ")
+
                     case _:
                         print("Has ingresado un dato erroneo.")
             if salir == 'si':
