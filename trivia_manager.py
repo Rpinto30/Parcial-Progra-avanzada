@@ -1,8 +1,7 @@
 from data_base import questions_list
 from input_func import *
-from questions import Question, MultipleChoiceQuestion, WritingsQuestion
-from manager_file import GameManager
 import  random
+
 class User:
     def __init__(self):
         self.user_name = "" # Lista que guarda usuarios
@@ -13,6 +12,7 @@ class User:
             print(f"Volviendo a jugar como {user}.")
         else:
             print("¡Se ha generado una nueva partida!")
+            self.user_name = user
             dict_user[user] = 0 # Nueva partida
 
 
@@ -24,19 +24,9 @@ class User:
             print("EL usuario no se encuentra registrado en el juego")
 
 class Game(User):
-    def __init__(self, usuario):
+    def __init__(self, user):
         super().__init__()
         self.user = user
-
-    def new_game(self, user):
-        score = 0
-        if user in self.users:
-            for user in self.users:
-                # self.points_list[user] = { user : score} # Error del point list de diccionario
-                pass
-            print("¡Se ha iniciado un nuevo juego!")
-        else:
-            print("No se encuentran usuarios registrados.")
 
     def start_game(self, point):
         print("\n Has iniciado el juego!")
