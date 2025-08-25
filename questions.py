@@ -31,5 +31,4 @@ class WritingsQuestion(Question):
     def __init__(self, question, correct_answer):
         super().__init__(question, correct_answer)
     def ask_question(self):
-        print(self.question)
         return input_str("Ingresa tu respuesta: ")
